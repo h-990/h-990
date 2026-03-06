@@ -1,4 +1,4 @@
-<![CDATA[<!-- ░░  H A R S H   K U M A R  ·  h - 9 9 0  ░░ -->
+<!-- ░░  H A R S H   K U M A R  ·  h - 9 9 0  ░░ -->
 
 <div align="center">
 
@@ -16,20 +16,19 @@
 
 <h2 align="center">⌬ <code>whoami</code> ⌬</h2>
 
-<table align="center">
-<tr>
-<td>
-
-```rust
+<div align="center">
+<table>
+<tr><td>
+<pre lang="rust">
 struct HarshKumar {
-    location:       &'static str,
-    interests:      Vec<&'static str>,
-    currently:      &'static str,
-    philosophy:     &'static str,
+    location:       &amp;'static str,
+    interests:      Vec&lt;&amp;'static str&gt;,
+    currently:      &amp;'static str,
+    philosophy:     &amp;'static str,
 }
 
 impl HarshKumar {
-    fn new() -> Self {
+    fn new() -&gt; Self {
         Self {
             location:   "exploring the stack",
             interests:  vec![
@@ -45,11 +44,10 @@ impl HarshKumar {
         }
     }
 }
-```
-
-</td>
-</tr>
+</pre>
+</td></tr>
 </table>
+</div>
 
 ---
 
@@ -86,14 +84,32 @@ impl HarshKumar {
 <h2 align="center">⌬ <code>ls ~/projects/ --featured</code> ⌬</h2>
 
 <div align="center">
-
-| ░░ Project | ░░ Stack | ░░ Description |
-|:-----------|:---------|:---------------|
-| **[`system_synapse`](https://github.com/h-990/system_synapse)** | `Rust` `ZeroMQ` `egui` `tokio` | 🧠 Bio-inspired AI ecosystem — Cortex Citadel (brain), Executor (hand), Nervous System (ZeroMQ bus) |
-| **[`API-Tester`](https://github.com/h-990/API-Tester)** | `C++20` `raylib` `CMake` `curl` | 🔬 Native GUI for auditing LLM APIs across 9+ providers. Cross-compiles via Zig toolchain |
-| **[`z-automation`](https://github.com/h-990/z-automation)** | `Python` `AXUI` | ⚡ macOS system automation — train AI models to control and automate system-level tasks |
-| **[`online-cheat-detection`](https://github.com/h-990/online-cheat-detection-main)** | `Python` `Flask` `OpenCV` `YOLOv8` | 👁️ AI exam proctoring with real-time face detection and violation monitoring |
-
+<table>
+<tr>
+<td align="center" width="50%">
+<h3><a href="https://github.com/h-990/system_synapse">🧠 system_synapse</a></h3>
+<code>Rust</code> <code>ZeroMQ</code> <code>egui</code> <code>tokio</code><br><br>
+Bio-inspired AI ecosystem — Cortex Citadel (brain), Executor (hand), Nervous System (ZeroMQ bus). Mimics biological neural architecture.
+</td>
+<td align="center" width="50%">
+<h3><a href="https://github.com/h-990/API-Tester">🔬 API-Tester</a></h3>
+<code>C++20</code> <code>raylib</code> <code>CMake</code> <code>curl</code><br><br>
+Native GUI for auditing LLM APIs across 9+ providers (OpenRouter, Google AI, Mistral, Groq). Cross-compiles via Zig toolchain.
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<h3><a href="https://github.com/h-990/z-automation">⚡ z-automation</a></h3>
+<code>Python</code> <code>AXUI</code><br><br>
+macOS system automation — train AI models to control, generate, and automate system-level tasks via Accessibility UI.
+</td>
+<td align="center" width="50%">
+<h3><a href="https://github.com/h-990/online-cheat-detection-main">👁️ online-cheat-detection</a></h3>
+<code>Python</code> <code>Flask</code> <code>OpenCV</code> <code>YOLOv8</code><br><br>
+AI-powered exam proctoring with real-time face detection (MediaPipe FaceMesh) and violation monitoring.
+</td>
+</tr>
+</table>
 </div>
 
 ---
@@ -155,4 +171,3 @@ impl HarshKumar {
 <div align="center">
 <i>"understand the machine — then transcend it"</i>
 </div>
-]]>
