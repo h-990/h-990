@@ -2,13 +2,43 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:00ff41,100:ff6600&height=220&section=header&text=HARSH%20KUMAR&fontColor=00ff41&fontSize=60&fontAlignY=35&desc=%E2%96%88%E2%96%93%E2%96%92%E2%96%91%20Systems%20Engineer%20%C2%B7%20Low-Level%20Thinker%20%C2%B7%20Builder%20%E2%96%91%E2%96%92%E2%96%93%E2%96%88&descAlignY=55&descSize=16&descColor=c9d1d9&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=0d1117&height=1&section=header" width="100%"/>
+
+<!-- ═══════════  CRT BANNER  ═══════════ -->
+
+<img src="./assets/crt_banner.png" width="700"/>
 
 <br>
 
+<!-- ═══════════  ASCII ART NAME  ═══════════ -->
+
+<pre>
+██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
+██║  ██║██╔══██╗██╔══██╗██╔════╝██║  ██║
+███████║███████║██████╔╝███████╗███████║
+██╔══██║██╔══██║██╔══██╗╚════██║██╔══██║
+██║  ██║██║  ██║██║  ██║███████║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+   ░▒▓ SYSTEMS ENGINEER · BUILDER ▓▒░
+</pre>
+
+<br>
+
+<!-- ═══════════  TYPING SVG  ═══════════ -->
+
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=700&height=100&lines=%3E+philosophy+%7C+mathematics+%7C+data+science;%3E+ai%2Fml+%7C+low-level+programming+%7C+system+design;%3E+currently+engineering+software+at+system+level_" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=700&height=120&lines=%E2%96%88+philosophy+%7C+mathematics+%7C+data+science;%E2%96%88+ai%2Fml+%7C+low-level+programming+%7C+system+design;%E2%96%88+currently+engineering+software+at+system+level_" alt="Typing SVG" />
 </a>
+
+<br>
+
+<!-- ═══════════  RETRO SPECS  ═══════════ -->
+
+<img src="https://img.shields.io/badge/OS-Arch_Linux-0d1117?style=flat-square&logo=archlinux&logoColor=00ff41"/>
+<img src="https://img.shields.io/badge/Shell-zsh-0d1117?style=flat-square&logo=gnubash&logoColor=ff6600"/>
+<img src="https://img.shields.io/badge/Editor-Neovim-0d1117?style=flat-square&logo=neovim&logoColor=00ff41"/>
+<img src="https://img.shields.io/badge/WM-i3wm-0d1117?style=flat-square&logo=i3&logoColor=ff6600"/>
 
 </div>
 
