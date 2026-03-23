@@ -28,7 +28,7 @@
 <!-- ═══════════  TYPING SVG  ═══════════ -->
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=700&height=120&lines=%E2%96%88+philosophy+%7C+mathematics+%7C+data+science;%E2%96%88+ai%2Fml+%7C+low-level+programming+%7C+system+design;%E2%96%88+currently+engineering+software+at+system+level_" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=700&height=120&lines=%E2%96%88+philosophy+%7C+mathematics+%7C+data+science;%E2%96%88+ai%2Fml+%7C+system+programming+%7C+system+design;%E2%96%88+currently+independantly+exploring_" alt="Typing SVG" />
 </a>
 
 <br>
