@@ -65,11 +65,6 @@
         0%, 100% { transform: translateY(0px) rotate(0deg); }
         50% { transform: translateY(7px) rotate(-1.5deg); }
       }
-      @keyframes cubeRotate3D {
-        0% { transform: rotate3d(1, 1, 0, 0deg); }
-        50% { transform: rotate3d(1, 1, 1, 180deg); }
-        100% { transform: rotate3d(1, 1, 0, 360deg); }
-      }
       @keyframes orbitRing1 {
         0% { transform: rotate(0deg) scaleY(0.42); }
         100% { transform: rotate(360deg) scaleY(0.42); }
@@ -86,10 +81,6 @@
       @keyframes pulseGlow {
         0%, 100% { opacity: 0.6; transform: scale(1); }
         50% { opacity: 0.95; transform: scale(1.08); }
-      }
-      @keyframes scanline {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(360px); }
       }
       @keyframes glyphDrift {
         0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.35; }
@@ -180,15 +171,14 @@
     <circle cx="190" cy="180" r="22" fill="url(#hologramOrb)" class="pulse-core"/>
 
     <!-- 3D Isometric Outer Wireframe Cube -->
-    <!-- Center of projection: (190, 180), isometric axis unit: 60px -->
-    <!-- Top Face (0, 60, 120 deg) -->
+    <!-- Top Face -->
     <polygon points="190,110 252,145 190,180 128,145" fill="rgba(0, 229, 255, 0.08)" stroke="#00e5ff" stroke-width="1.8" filter="url(#glow)"/>
     <!-- Left Face -->
     <polygon points="128,145 190,180 190,250 128,215" fill="rgba(0, 255, 65, 0.08)" stroke="#00ff41" stroke-width="1.8" filter="url(#glow)"/>
     <!-- Right Face -->
     <polygon points="190,180 252,145 252,215 190,250" fill="rgba(255, 102, 0, 0.08)" stroke="#ff6600" stroke-width="1.8" filter="url(#glow)"/>
 
-    <!-- Inner 3D Hypercube Core (Suspended in Center) -->
+    <!-- Inner 3D Hypercube Core -->
     <!-- Top inner face -->
     <polygon points="190,145 221,162 190,180 159,162" fill="rgba(255, 255, 255, 0.15)" stroke="#ffffff" stroke-width="1.2"/>
     <!-- Left inner face -->
@@ -196,7 +186,7 @@
     <!-- Right inner face -->
     <polygon points="190,180 221,162 221,197 190,215" fill="rgba(0, 229, 255, 0.2)" stroke="#00e5ff" stroke-width="1.2"/>
 
-    <!-- 4D Hypercube Tesseract Projection Struts (Connecting Outer to Inner) -->
+    <!-- 4D Hypercube Tesseract Projection Struts -->
     <line x1="190" y1="110" x2="190" y2="145" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3,3"/>
     <line x1="252" y1="145" x2="221" y2="162" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3,3"/>
     <line x1="128" y1="145" x2="159" y2="162" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="3,3"/>
@@ -212,41 +202,43 @@
     <circle cx="190" cy="180" r="4.5" fill="#ffffff" filter="url(#intenseGlow)"/>
   </g>
 
-  <!-- ═════════ FLOATING 3D MATH & LOGIC GLYPHS ═════════ -->
+  <!-- ═════════ FLOATING 3D MULTIDISCIPLINARY GLYPHS ═════════ -->
+  <!-- Glyph 1: C11 Systems / Cache Lines -->
   <g class="glyph-1">
-    <rect x="75" y="70" width="46" height="26" rx="6" fill="#0c1421" stroke="#00ff41" stroke-width="1" opacity="0.85"/>
-    <text x="98" y="87" fill="#00ff41" font-size="12" font-weight="700" text-anchor="middle" class="mono">λ</text>
+    <rect x="70" y="70" width="58" height="26" rx="6" fill="#0c1421" stroke="#00ff41" stroke-width="1" opacity="0.9"/>
+    <text x="99" y="87" fill="#00ff41" font-size="11" font-weight="700" text-anchor="middle" class="mono">C11:64B</text>
   </g>
 
+  <!-- Glyph 2: Pure Math / Topology -->
   <g class="glyph-2">
-    <rect x="290" y="85" width="70" height="26" rx="6" fill="#0c1421" stroke="#00e5ff" stroke-width="1" opacity="0.85"/>
-    <text x="325" y="102" fill="#00e5ff" font-size="11" font-weight="700" text-anchor="middle" class="mono">|Ω| = 1</text>
+    <rect x="290" y="80" width="60" height="26" rx="6" fill="#0c1421" stroke="#00e5ff" stroke-width="1" opacity="0.9"/>
+    <text x="320" y="97" fill="#00e5ff" font-size="12" font-weight="700" text-anchor="middle" class="mono">∫ dx · ⊕</text>
   </g>
 
+  <!-- Glyph 3: Lisp / Symbolic Lambda -->
   <g class="glyph-3">
-    <rect x="70" y="260" width="76" height="26" rx="6" fill="#0c1421" stroke="#ff6600" stroke-width="1" opacity="0.85"/>
-    <text x="108" y="277" fill="#ff6600" font-size="11" font-weight="700" text-anchor="middle" class="mono">C11:64B</text>
+    <rect x="70" y="260" width="60" height="26" rx="6" fill="#0c1421" stroke="#ff6600" stroke-width="1" opacity="0.9"/>
+    <text x="100" y="277" fill="#ff6600" font-size="12" font-weight="700" text-anchor="middle" class="mono">(λ . ffi)</text>
   </g>
 
+  <!-- Glyph 4: Information Theory -->
   <g class="glyph-4">
-    <rect x="280" y="250" width="65" height="26" rx="6" fill="#0c1421" stroke="#8b5cf6" stroke-width="1" opacity="0.85"/>
-    <text x="312" y="267" fill="#a78bfa" font-size="11" font-weight="700" text-anchor="middle" class="mono">H(X;Y)</text>
+    <rect x="280" y="255" width="68" height="26" rx="6" fill="#0c1421" stroke="#8b5cf6" stroke-width="1" opacity="0.9"/>
+    <text x="314" y="272" fill="#a78bfa" font-size="11" font-weight="700" text-anchor="middle" class="mono">H(X;Y)</text>
   </g>
 
-  <!-- ═════════ HERO TYPOGRAPHY & 3D HUD ═════════ -->
+  <!-- ═════════ HERO TYPOGRAPHY & MULTI-DOMAIN HUD ═════════ -->
   <g transform="translate(390, 45)">
     <!-- High-Tech Pill Badge -->
     <g class="floating-hero">
-      <rect x="0" y="0" width="280" height="26" rx="13" fill="#0e1726" stroke="#00ff41" stroke-width="1"/>
+      <rect x="0" y="0" width="370" height="26" rx="13" fill="#0e1726" stroke="#00e5ff" stroke-width="1"/>
       <circle cx="14" cy="13" r="4" fill="#00ff41" filter="url(#glow)"/>
-      <text x="26" y="17" fill="#00ff41" font-size="10.5" font-weight="700" letter-spacing="1.5" class="mono">
-        STATE: COLLAPSED [|Ω| = 1]
+      <text x="26" y="17" fill="#00e5ff" font-size="10.5" font-weight="700" letter-spacing="1.2" class="mono">
+        SYSTEMS · PURE MATH · INFO THEORY · AI
       </text>
-      <text x="215" y="17" fill="#94a3b8" font-size="10" class="mono">DETERMINISTIC</text>
     </g>
 
     <!-- 3D Extruded Title Effect -->
-    <!-- 3D Shadow Layers for Extrusion -->
     <text x="3" y="83" fill="#003542" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
     <text x="2" y="82" fill="#005b70" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
     <text x="1" y="81" fill="#0094b3" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
@@ -256,8 +248,8 @@
     </text>
 
     <!-- Subtitle / Mission Statement -->
-    <text x="2" y="112" fill="#94a3b8" font-size="14.5" font-weight="500" letter-spacing="0.4" class="sans">
-      Deconstructing machines to uncover their underlying <tspan fill="#00ff41" font-weight="700">math</tspan> &amp; <tspan fill="#00e5ff" font-weight="700">logic</tspan>.
+    <text x="2" y="112" fill="#94a3b8" font-size="14.5" font-weight="500" letter-spacing="0.3" class="sans">
+      Deconstructing computing: from <tspan fill="#00ff41" font-weight="700">bare-metal C engines</tspan> to <tspan fill="#00e5ff" font-weight="700">pure math &amp; AI architectures</tspan>.
     </text>
 
     <!-- 3D Cybernetic Divider Line -->
@@ -269,26 +261,26 @@
 
     <!-- 3D Floating Concept Badges -->
     <g transform="translate(0, 150)">
-      <!-- Badge 1: GOFAI Revival -->
+      <!-- Badge 1: Low-Level Systems -->
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="168" height="34" rx="8" fill="#0d1424" stroke="#00ff41" stroke-width="1.2"/>
-        <text x="14" y="21" fill="#00ff41" font-size="11" font-weight="700" class="mono">⚡ REVIVING GOFAI</text>
+        <text x="14" y="21" fill="#00ff41" font-size="10.5" font-weight="700" class="mono">⚙️ LOW-LEVEL &amp; STORAGE</text>
       </g>
 
-      <!-- Badge 2: Information Theory -->
+      <!-- Badge 2: Pure Mathematics -->
       <g transform="translate(180, 0)">
-        <rect x="0" y="0" width="186" height="34" rx="8" fill="#0d1424" stroke="#00e5ff" stroke-width="1.2"/>
-        <text x="14" y="21" fill="#00e5ff" font-size="11" font-weight="700" class="mono">📐 INFORMATION THEORY</text>
+        <rect x="0" y="0" width="164" height="34" rx="8" fill="#0d1424" stroke="#ff6600" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#ff6600" font-size="10.5" font-weight="700" class="mono">∫ PURE MATHEMATICS</text>
       </g>
 
-      <!-- Badge 3: Pure Math -->
-      <g transform="translate(378, 0)">
-        <rect x="0" y="0" width="170" height="34" rx="8" fill="#0d1424" stroke="#ff6600" stroke-width="1.2"/>
-        <text x="14" y="21" fill="#ff6600" font-size="11" font-weight="700" class="mono">∫ PURE MATHEMATICS</text>
+      <!-- Badge 3: Neuro-Symbolic & AI -->
+      <g transform="translate(356, 0)">
+        <rect x="0" y="0" width="180" height="34" rx="8" fill="#0d1424" stroke="#00e5ff" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#00e5ff" font-size="10.5" font-weight="700" class="mono">🧠 NEURO-SYMBOLIC &amp; AI</text>
       </g>
     </g>
 
-    <!-- Mathematical Axiom Console Display -->
+    <!-- Multidisciplinary Console Display -->
     <g transform="translate(0, 202)">
       <rect x="0" y="0" width="550" height="58" rx="8" fill="#080c14" stroke="#1e2d42" stroke-width="1.2"/>
       
@@ -297,14 +289,14 @@
       <circle cx="12" cy="9" r="3" fill="#ef4444"/>
       <circle cx="22" cy="9" r="3" fill="#eab308"/>
       <circle cx="32" cy="9" r="3" fill="#10b981"/>
-      <text x="46" y="12" fill="#64748b" font-size="9" class="mono">proof_engine.lisp — Axiom of Constraint Collapse</text>
+      <text x="46" y="12" fill="#64748b" font-size="9" class="mono">harsh.kernel — multidisciplinary computational stack</text>
 
-      <!-- Formula Code Snippet -->
-      <text x="14" y="38" fill="#94a3b8" font-size="11" class="mono">
-        <tspan fill="#ff0055">lim</tspan> <tspan fill="#64748b">[constraints → complete]</tspan> <tspan fill="#00ff41">|Ω_solution|</tspan> = <tspan fill="#00e5ff">1</tspan>
+      <!-- Code Snippet -->
+      <text x="14" y="37" fill="#94a3b8" font-size="10.5" class="mono">
+        <tspan fill="#00ff41">(:systems</tspan> <tspan fill="#cbd5e1">"C11 storage engines, WAL, custom slab allocators"</tspan><tspan fill="#00ff41">)</tspan>
       </text>
-      <text x="14" y="51" fill="#64748b" font-size="9.5" class="mono">
-        ⇒ <tspan fill="#f59e0b">Statistical Guessing Utility = 0</tspan> · Stop guessing, start proving.
+      <text x="14" y="50" fill="#94a3b8" font-size="10.5" class="mono">
+        <tspan fill="#00e5ff">(:theory</tspan>  <tspan fill="#cbd5e1">"pure math, information limits, neuro-symbolic &amp; Lisp"</tspan><tspan fill="#00e5ff">)</tspan>
       </text>
     </g>
   </g>
