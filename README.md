@@ -5,15 +5,15 @@
 
 <!-- ═══════════ TYPING SVG ANIMATION ═══════════ -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=820&height=100&lines=%E2%88%B4+Statistical+AI+guesses.+Explicit+constraints+prove.;%E2%88%B4+Dual+Bachelors%3A+IIT+Madras+(BS+Data+Science)+%2B+BSc+(Hons)+Maths;%E2%88%B4+Reviving+GOFAI+(Good+Old-Fashioned+AI)+with+symbolic+rigor;%E2%88%B4+(defparameter+*mind*+'(common-lisp+pure-c+formal-math))" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=820&height=100&lines=%E2%88%B4+Statistical+AI+guesses.+Explicit+constraints+prove.;%E2%88%B4+Deconstructing+systems+to+uncover+the+underlying+math+%26+logic;%E2%88%B4+Reviving+GOFAI+(Good+Old-Fashioned+AI)+with+symbolic+rigor;%E2%88%B4+(defparameter+*mind*+'(common-lisp+pure-c+formal-math))" alt="Typing SVG" />
 </a>
 
 <br>
 
 <!-- ═══════════ STATUS BADGES ═══════════ -->
 <p align="center">
-  <img src="https://img.shields.io/badge/IIT_Madras-BS_Data_Science-161b22?style=for-the-badge&logo=googleclassroom&logoColor=00ff41&labelColor=0d1117"/>
-  <img src="https://img.shields.io/badge/BSc_Maths-Honours-161b22?style=for-the-badge&logo=wolframmathematica&logoColor=ff6600&labelColor=0d1117"/>
+  <img src="https://img.shields.io/badge/Craft-Systems_%26_Engines-161b22?style=for-the-badge&logo=c&logoColor=00ff41&labelColor=0d1117"/>
+  <img src="https://img.shields.io/badge/Theory-Pure_Mathematics-161b22?style=for-the-badge&logo=wolframmathematica&logoColor=ff6600&labelColor=0d1117"/>
   <img src="https://img.shields.io/badge/Focus-Information_Theory_%26_GOFAI-161b22?style=for-the-badge&logo=scikitlearn&logoColor=00ff41&labelColor=0d1117"/>
   <img src="https://img.shields.io/badge/Mission-Collapse_The_Solution_Space-161b22?style=for-the-badge&logo=target&logoColor=ff6600&labelColor=0d1117"/>
 </p>
@@ -29,9 +29,8 @@
 <tr><td>
 <pre lang="lisp">
 (defparameter *harsh*
-  (make-instance 'polymath-in-progress
-    :education    '("BS in Data Science @ IIT Madras"
-                    "BSc (Hons) in Mathematics")
+  (make-instance 'systems-thinker
+    :identity     "Independent researcher, builder & deconstructor of machines"
     :obsession    "The theoretical limits of modern computing & information theory"
     :doctrine     "We rely too heavily on statistical AI to guess logical outcomes.
                    If you apply explicit constraints, the solution space mathematically
