@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#111927" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#090d16" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#04060a" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="cubeGlow" cx="190" cy="180" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#00ff41" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hologramOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#00ff41" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Neon Gradients -->
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <linearGradient id="neonOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6600"/>
+      <stop offset="100%" stop-color="#ff0055"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#d4f7ff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <linearGradient id="gridGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00ff41" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#00e5ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Filters for 3D Neon Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="intenseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur1"/>
+      <feGaussianBlur stdDeviation="3" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      /* ═════════ 3D Animation Styles ═════════ */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(1deg); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(7px) rotate(-1.5deg); }
+      }
+      @keyframes cubeRotate3D {
+        0% { transform: rotate3d(1, 1, 0, 0deg); }
+        50% { transform: rotate3d(1, 1, 1, 180deg); }
+        100% { transform: rotate3d(1, 1, 0, 360deg); }
+      }
+      @keyframes orbitRing1 {
+        0% { transform: rotate(0deg) scaleY(0.42); }
+        100% { transform: rotate(360deg) scaleY(0.42); }
+      }
+      @keyframes orbitRing2 {
+        0% { transform: rotate(60deg) scaleY(0.42); }
+        100% { transform: rotate(420deg) scaleY(0.42); }
+      }
+      @keyframes pulseGrid {
+        0% { opacity: 0.25; stroke-dashoffset: 0; }
+        50% { opacity: 0.45; }
+        100% { opacity: 0.25; stroke-dashoffset: 40; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 0.95; transform: scale(1.08); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(360px); }
+      }
+      @keyframes glyphDrift {
+        0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.35; }
+        50% { transform: translateY(-12px) rotate(4deg); opacity: 0.75; }
+      }
+
+      .floating-hero {
+        animation: floatSlow 6s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .cube-cluster {
+        animation: floatReverse 7s ease-in-out infinite;
+        transform-origin: 190px 180px;
+      }
+      .ring-1 {
+        animation: orbitRing1 12s linear infinite;
+        transform-origin: 190px 180px;
+      }
+      .ring-2 {
+        animation: orbitRing2 16s linear reverse infinite;
+        transform-origin: 190px 180px;
+      }
+      .grid-lines {
+        animation: pulseGrid 4s linear infinite;
+      }
+      .pulse-core {
+        animation: pulseGlow 3.5s ease-in-out infinite;
+        transform-origin: 190px 180px;
+      }
+      .glyph-1 { animation: glyphDrift 5s ease-in-out infinite; }
+      .glyph-2 { animation: glyphDrift 6.5s ease-in-out infinite 1s; }
+      .glyph-3 { animation: glyphDrift 4.8s ease-in-out infinite 2s; }
+      .glyph-4 { animation: glyphDrift 7s ease-in-out infinite 0.5s; }
+
+      .mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      }
+      .sans {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- ═════════ BACKGROUND & VIGNETTE ═════════ -->
+  <rect width="1000" height="360" rx="16" fill="url(#bgGlow)"/>
+  <rect width="1000" height="360" rx="16" fill="none" stroke="#1f293d" stroke-width="1.5"/>
+
+  <!-- ═════════ 3D ISOMETRIC GROUND GRID ═════════ -->
+  <g class="grid-lines" stroke="url(#gridGrad)" stroke-width="1.2" stroke-dasharray="6,4">
+    <!-- Perspective lines converging to horizon at y=170 -->
+    <line x1="0" y1="360" x2="500" y2="180"/>
+    <line x1="120" y1="360" x2="500" y2="180"/>
+    <line x1="260" y1="360" x2="500" y2="180"/>
+    <line x1="400" y1="360" x2="500" y2="180"/>
+    <line x1="500" y1="360" x2="500" y2="180"/>
+    <line x1="600" y1="360" x2="500" y2="180"/>
+    <line x1="740" y1="360" x2="500" y2="180"/>
+    <line x1="880" y1="360" x2="500" y2="180"/>
+    <line x1="1000" y1="360" x2="500" y2="180"/>
+
+    <!-- Horizontal grid transversals with logarithmic perspective depth -->
+    <line x1="0" y1="350" x2="1000" y2="350"/>
+    <line x1="70" y1="320" x2="930" y2="320"/>
+    <line x1="140" y1="290" x2="860" y2="290"/>
+    <line x1="210" y1="262" x2="790" y2="262"/>
+    <line x1="275" y1="236" x2="725" y2="236"/>
+    <line x1="335" y1="214" x2="665" y2="214"/>
+    <line x1="390" y1="196" x2="610" y2="196"/>
+  </g>
+
+  <!-- Ambient Glow Behind 3D Engine -->
+  <circle cx="190" cy="180" r="140" fill="url(#cubeGlow)"/>
+
+  <!-- ═════════ 3D ISOMETRIC TESSERACT & FLOATING ENGINE ═════════ -->
+  <g class="cube-cluster">
+    <!-- Outer Orbital Rings with 3D Tilt -->
+    <g class="ring-1">
+      <ellipse cx="190" cy="180" rx="130" ry="130" fill="none" stroke="#00e5ff" stroke-width="1" stroke-dasharray="14 10 4 10" opacity="0.6"/>
+      <circle cx="320" cy="180" r="4" fill="#00e5ff" filter="url(#glow)"/>
+      <circle cx="60" cy="180" r="2.5" fill="#00ff41"/>
+    </g>
+    <g class="ring-2">
+      <ellipse cx="190" cy="180" rx="115" ry="115" fill="none" stroke="#ff6600" stroke-width="1.2" stroke-dasharray="18 12" opacity="0.5"/>
+      <circle cx="190" cy="65" r="3.5" fill="#ff6600" filter="url(#glow)"/>
+    </g>
+
+    <!-- Glowing Core Hologram Singularity -->
+    <circle cx="190" cy="180" r="22" fill="url(#hologramOrb)" class="pulse-core"/>
+
+    <!-- 3D Isometric Outer Wireframe Cube -->
+    <!-- Center of projection: (190, 180), isometric axis unit: 60px -->
+    <!-- Top Face (0, 60, 120 deg) -->
+    <polygon points="190,110 252,145 190,180 128,145" fill="rgba(0, 229, 255, 0.08)" stroke="#00e5ff" stroke-width="1.8" filter="url(#glow)"/>
+    <!-- Left Face -->
+    <polygon points="128,145 190,180 190,250 128,215" fill="rgba(0, 255, 65, 0.08)" stroke="#00ff41" stroke-width="1.8" filter="url(#glow)"/>
+    <!-- Right Face -->
+    <polygon points="190,180 252,145 252,215 190,250" fill="rgba(255, 102, 0, 0.08)" stroke="#ff6600" stroke-width="1.8" filter="url(#glow)"/>
+
+    <!-- Inner 3D Hypercube Core (Suspended in Center) -->
+    <!-- Top inner face -->
+    <polygon points="190,145 221,162 190,180 159,162" fill="rgba(255, 255, 255, 0.15)" stroke="#ffffff" stroke-width="1.2"/>
+    <!-- Left inner face -->
+    <polygon points="159,162 190,180 190,215 159,197" fill="rgba(0, 255, 65, 0.2)" stroke="#00ff41" stroke-width="1.2"/>
+    <!-- Right inner face -->
+    <polygon points="190,180 221,162 221,197 190,215" fill="rgba(0, 229, 255, 0.2)" stroke="#00e5ff" stroke-width="1.2"/>
+
+    <!-- 4D Hypercube Tesseract Projection Struts (Connecting Outer to Inner) -->
+    <line x1="190" y1="110" x2="190" y2="145" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="252" y1="145" x2="221" y2="162" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="128" y1="145" x2="159" y2="162" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="190" y1="250" x2="190" y2="215" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="128" y1="215" x2="159" y2="197" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="252" y1="215" x2="221" y2="197" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Glowing Vertices -->
+    <circle cx="190" cy="110" r="3.5" fill="#ffffff" filter="url(#glow)"/>
+    <circle cx="252" cy="145" r="3.5" fill="#00e5ff" filter="url(#glow)"/>
+    <circle cx="128" cy="145" r="3.5" fill="#00ff41" filter="url(#glow)"/>
+    <circle cx="190" cy="250" r="3.5" fill="#ff6600" filter="url(#glow)"/>
+    <circle cx="190" cy="180" r="4.5" fill="#ffffff" filter="url(#intenseGlow)"/>
+  </g>
+
+  <!-- ═════════ FLOATING 3D MATH & LOGIC GLYPHS ═════════ -->
+  <g class="glyph-1">
+    <rect x="75" y="70" width="46" height="26" rx="6" fill="#0c1421" stroke="#00ff41" stroke-width="1" opacity="0.85"/>
+    <text x="98" y="87" fill="#00ff41" font-size="12" font-weight="700" text-anchor="middle" class="mono">λ</text>
+  </g>
+
+  <g class="glyph-2">
+    <rect x="290" y="85" width="70" height="26" rx="6" fill="#0c1421" stroke="#00e5ff" stroke-width="1" opacity="0.85"/>
+    <text x="325" y="102" fill="#00e5ff" font-size="11" font-weight="700" text-anchor="middle" class="mono">|Ω| = 1</text>
+  </g>
+
+  <g class="glyph-3">
+    <rect x="70" y="260" width="76" height="26" rx="6" fill="#0c1421" stroke="#ff6600" stroke-width="1" opacity="0.85"/>
+    <text x="108" y="277" fill="#ff6600" font-size="11" font-weight="700" text-anchor="middle" class="mono">C11:64B</text>
+  </g>
+
+  <g class="glyph-4">
+    <rect x="280" y="250" width="65" height="26" rx="6" fill="#0c1421" stroke="#8b5cf6" stroke-width="1" opacity="0.85"/>
+    <text x="312" y="267" fill="#a78bfa" font-size="11" font-weight="700" text-anchor="middle" class="mono">H(X;Y)</text>
+  </g>
+
+  <!-- ═════════ HERO TYPOGRAPHY & 3D HUD ═════════ -->
+  <g transform="translate(390, 45)">
+    <!-- High-Tech Pill Badge -->
+    <g class="floating-hero">
+      <rect x="0" y="0" width="280" height="26" rx="13" fill="#0e1726" stroke="#00ff41" stroke-width="1"/>
+      <circle cx="14" cy="13" r="4" fill="#00ff41" filter="url(#glow)"/>
+      <text x="26" y="17" fill="#00ff41" font-size="10.5" font-weight="700" letter-spacing="1.5" class="mono">
+        STATE: COLLAPSED [|Ω| = 1]
+      </text>
+      <text x="215" y="17" fill="#94a3b8" font-size="10" class="mono">DETERMINISTIC</text>
+    </g>
+
+    <!-- 3D Extruded Title Effect -->
+    <!-- 3D Shadow Layers for Extrusion -->
+    <text x="3" y="83" fill="#003542" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
+    <text x="2" y="82" fill="#005b70" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
+    <text x="1" y="81" fill="#0094b3" font-size="54" font-weight="900" letter-spacing="-0.5" class="sans">HARSH KUMAR</text>
+    <!-- Front Text Face with Radiant Gradient -->
+    <text x="0" y="80" fill="url(#textGrad)" font-size="54" font-weight="900" letter-spacing="-0.5" filter="url(#glow)" class="sans">
+      HARSH KUMAR
+    </text>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="2" y="112" fill="#94a3b8" font-size="14.5" font-weight="500" letter-spacing="0.4" class="sans">
+      Deconstructing machines to uncover their underlying <tspan fill="#00ff41" font-weight="700">math</tspan> &amp; <tspan fill="#00e5ff" font-weight="700">logic</tspan>.
+    </text>
+
+    <!-- 3D Cybernetic Divider Line -->
+    <g transform="translate(0, 130)">
+      <line x1="0" y1="0" x2="560" y2="0" stroke="#1e293b" stroke-width="1"/>
+      <line x1="0" y1="0" x2="160" y2="0" stroke="url(#neonGreen)" stroke-width="2" filter="url(#glow)"/>
+      <polygon points="160,-3 166,0 160,3" fill="#00e5ff"/>
+    </g>
+
+    <!-- 3D Floating Concept Badges -->
+    <g transform="translate(0, 150)">
+      <!-- Badge 1: GOFAI Revival -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="168" height="34" rx="8" fill="#0d1424" stroke="#00ff41" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#00ff41" font-size="11" font-weight="700" class="mono">⚡ REVIVING GOFAI</text>
+      </g>
+
+      <!-- Badge 2: Information Theory -->
+      <g transform="translate(180, 0)">
+        <rect x="0" y="0" width="186" height="34" rx="8" fill="#0d1424" stroke="#00e5ff" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#00e5ff" font-size="11" font-weight="700" class="mono">📐 INFORMATION THEORY</text>
+      </g>
+
+      <!-- Badge 3: Pure Math -->
+      <g transform="translate(378, 0)">
+        <rect x="0" y="0" width="170" height="34" rx="8" fill="#0d1424" stroke="#ff6600" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#ff6600" font-size="11" font-weight="700" class="mono">∫ PURE MATHEMATICS</text>
+      </g>
+    </g>
+
+    <!-- Mathematical Axiom Console Display -->
+    <g transform="translate(0, 202)">
+      <rect x="0" y="0" width="550" height="58" rx="8" fill="#080c14" stroke="#1e2d42" stroke-width="1.2"/>
+      
+      <!-- Top Bar of Console -->
+      <line x1="0" y1="18" x2="550" y2="18" stroke="#131c2b" stroke-width="1"/>
+      <circle cx="12" cy="9" r="3" fill="#ef4444"/>
+      <circle cx="22" cy="9" r="3" fill="#eab308"/>
+      <circle cx="32" cy="9" r="3" fill="#10b981"/>
+      <text x="46" y="12" fill="#64748b" font-size="9" class="mono">proof_engine.lisp — Axiom of Constraint Collapse</text>
+
+      <!-- Formula Code Snippet -->
+      <text x="14" y="38" fill="#94a3b8" font-size="11" class="mono">
+        <tspan fill="#ff0055">lim</tspan> <tspan fill="#64748b">[constraints → complete]</tspan> <tspan fill="#00ff41">|Ω_solution|</tspan> = <tspan fill="#00e5ff">1</tspan>
+      </text>
+      <text x="14" y="51" fill="#64748b" font-size="9.5" class="mono">
+        ⇒ <tspan fill="#f59e0b">Statistical Guessing Utility = 0</tspan> · Stop guessing, start proving.
+      </text>
+    </g>
+  </g>
+
+  <!-- Corner Tech Accents -->
+  <g stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 12 28 L 12 12 L 28 12"/>
+    <path d="M 988 28 L 988 12 L 972 12"/>
+    <path d="M 12 332 L 12 348 L 28 348"/>
+    <path d="M 988 332 L 988 348 L 972 348"/>
+  </g>
+</svg>

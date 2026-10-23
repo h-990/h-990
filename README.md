@@ -1,7 +1,13 @@
 <div align="center">
 
-<!-- ═══════════ HEADER BANNER ═══════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:161b22,70:00ff41,100:ff6600&height=220&section=header&text=HARSH%20KUMAR&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Pure%20Math%20%C2%B7%20Information%20Theory%20%C2%B7%20Reviving%20GOFAI%20%C2%B7%20Deterministic%20Systems&descSize=18&descAlignY=62&descColor=00ff41" width="100%"/>
+<!-- ═══════════ 3D ISOMETRIC ANIMATED HERO ═══════════ -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/h-990/h-990/main/assets/hero-3d.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/h-990/h-990/main/assets/hero-3d.svg">
+  <img src="https://raw.githubusercontent.com/h-990/h-990/main/assets/hero-3d.svg" alt="Harsh Kumar 3D Animated Hero" width="100%" />
+</picture>
+
+<br>
 
 <!-- ═══════════ TYPING SVG ANIMATION ═══════════ -->
 <a href="https://git.io/typing-svg">
